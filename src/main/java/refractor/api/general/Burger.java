@@ -43,8 +43,8 @@ public class Burger implements FoodProduct {
         buffer.append(DELIM);
         buffer.append(String.format("Price:             %.2f €\n", price()));
         buffer.append(DELIM);
-        buffer.append(String.format("Calories:          %.2f cal\n", calories()));
-        buffer.append(String.format("Calories /100g:    %.2f cal\n", calories_per_100g()));
+        buffer.append(String.format("Calories:          %.0f cal\n", calories()));
+        buffer.append(String.format("Calories /100g:    %.0f cal\n", calories_per_100g()));
         buffer.append(DELIM);
         return buffer.toString();
     }

@@ -33,6 +33,11 @@ public class Meat implements FoodProduct {
             return rtr;
         }
     }
+
+    public enum MenuSize {
+        LITTLE, MEDIUM, BIG
+    }
+
     @Override
     public double calories_per_100g() {
         return this.type.calories_per_100g();
