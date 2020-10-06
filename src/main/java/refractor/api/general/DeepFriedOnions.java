@@ -1,6 +1,6 @@
 package refractor.api.general;
 
-public class DeepFriedOnions implements Product {
+public class DeepFriedOnions implements FoodProduct {
     // 590 kcal / 100g
 
     private double weight;
@@ -10,6 +10,15 @@ public class DeepFriedOnions implements Product {
         this.weight = weight;
     }
 
+    @Override
+    public double calories_per_100g() {
+        return 590;
+    }
+
+    @Override
+    public double calories() {
+        return this.calories_per_100g() * this.weight() / 100;
+    }
     @Override
     public double weight() {
         return weight;

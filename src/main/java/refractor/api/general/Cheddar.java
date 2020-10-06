@@ -1,6 +1,6 @@
 package refractor.api.general;
 
-public class Cheddar implements Product {
+public class Cheddar implements FoodProduct {
     // 400 kcal / 100g
 
     private double weight;
@@ -8,6 +8,12 @@ public class Cheddar implements Product {
 
     public Cheddar(double weight) {
         this.weight = weight;
+    }
+
+
+    @Override
+    public double calories_per_100g() {
+        return 400;
     }
 
     @Override
